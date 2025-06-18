@@ -16,6 +16,7 @@ public class GateRespository
     {
         gates = new TreeMap<>();
         Gate gate = new Gate(1, "1", GateType.ENTRY, GateStatus.OPERATIONAL, new Operator("ABC"));
+        gates.put(1, gate);
     }
 
     public Optional<Gate> findById(int gate_id)

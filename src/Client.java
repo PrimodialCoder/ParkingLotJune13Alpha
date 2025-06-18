@@ -8,6 +8,7 @@ import repositories.ParkingLotRepository;
 import repositories.TicketRepository;
 import repositories.VehicleRepository;
 import services.ITicketService;
+import services.InitialisationService;
 import services.TicketService;
 
 public class Client
@@ -18,6 +19,9 @@ public class Client
         ParkingLotRepository parkingLotRepository = new ParkingLotRepository();
         TicketRepository ticketRepository = new TicketRepository();
 
+        InitialisationService initialisationService = new InitialisationService(parkingLotRepository);
+        initialisationService.initialise();
+
         ITicketService ticketService = new TicketService(
                 gateRespository, vehicleRepository,
                 parkingLotRepository, ticketRepository
@@ -26,7 +30,7 @@ public class Client
         TicketController ticketController = new TicketController(ticketService);
         IssueRequestDto issueRequestDto = new IssueRequestDto();
         issueRequestDto.setEntry_gate_id(1);
-        issueRequestDto.setVehicle_type(VehicleType.HEAVY);
+        issueRequestDto.setVehicle_type(VehicleType.EV);
         issueRequestDto.setOperator_id(1);
         issueRequestDto.setLicense_plate("TG 07 2389");
         issueRequestDto.setParkinglot_id(1);

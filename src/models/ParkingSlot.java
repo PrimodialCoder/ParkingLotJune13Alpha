@@ -7,8 +7,8 @@ public class ParkingSlot extends BaseModel
     // If a slot can support multiple vehicles, we convert this to a list
     private VehicleType vehicleType;
 
-    public ParkingSlot(int id) {
-        super(id);
+    public ParkingSlot() {
+        super(-1);
     }
 
     public String getNumber() {

@@ -20,4 +20,11 @@ public class ParkingLotRepository
     {
         return Optional.ofNullable(parkingLots.get(parkingLotId));
     }
+
+    public ParkingLot save(ParkingLot parkingLot)
+    {
+        parkingLot.setId(counter++);
+        parkingLots.put(parkingLot.getId(), parkingLot);
+        return parkingLot;
+    }
 }
