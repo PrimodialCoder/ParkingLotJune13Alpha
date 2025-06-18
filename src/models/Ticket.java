@@ -9,6 +9,10 @@ public class Ticket extends BaseModel
     private Gate entryGate;
     private ParkingSlot parkingSlot;
 
+    public Ticket() {
+        super(-1);
+    }
+
     public Date getEntryTime() {
         return entryTime;
     }

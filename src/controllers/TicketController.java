@@ -4,13 +4,14 @@ import dtos.IssueRequestDto;
 import dtos.IssueResponseDto;
 import dtos.ResponseStatus;
 import models.Ticket;
+import services.ITicketService;
 import services.TicketService;
 
 public class TicketController
 {
-    private TicketService ticketService;
+    private ITicketService ticketService;
 
-    public TicketController(TicketService ticketService)
+    public TicketController(ITicketService ticketService)
     {
         this.ticketService = ticketService;
     }
