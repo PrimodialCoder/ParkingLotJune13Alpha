@@ -10,10 +10,9 @@ public class IssueRequestDto
 {
     private String license_plate;
     private VehicleType vehicle_type;
-    private String operator_id;
-    private String entry_gate;
+    private int operator_id;
+    private int entry_gate_id;
     private int parkinglot_id;
-    private Date entryTime;
 
     public String getLicense_plate() {
         return license_plate;
@@ -31,21 +30,6 @@ public class IssueRequestDto
         this.vehicle_type = vehicle_type;
     }
 
-    public String getOperator_id() {
-        return operator_id;
-    }
-
-    public void setOperator_id(String operator_id) {
-        this.operator_id = operator_id;
-    }
-
-    public String getEntry_gate() {
-        return entry_gate;
-    }
-
-    public void setEntry_gate(String entry_gate) {
-        this.entry_gate = entry_gate;
-    }
 
     public int getParkinglot_id() {
         return parkinglot_id;
@@ -55,11 +39,19 @@ public class IssueRequestDto
         this.parkinglot_id = parkinglot_id;
     }
 
-    public Date getEntryTime() {
-        return entryTime;
+    public int getOperator_id() {
+        return operator_id;
     }
 
-    public void setEntryTime(Date entryTime) {
-        this.entryTime = entryTime;
+    public void setOperator_id(int operator_id) {
+        this.operator_id = operator_id;
+    }
+
+    public int getEntry_gate_id() {
+        return entry_gate_id;
+    }
+
+    public void setEntry_gate_id(int entry_gate_id) {
+        this.entry_gate_id = entry_gate_id;
     }
 }

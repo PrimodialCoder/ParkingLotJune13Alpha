@@ -31,4 +31,8 @@ public class BaseModel
     public void setUpdatedAt(Date updatedAt) {
         this.updatedAt = updatedAt;
     }
+
+    public BaseModel(int id) {
+        this.id = id;
+    }
 }

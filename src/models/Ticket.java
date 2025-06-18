@@ -6,6 +6,8 @@ public class Ticket extends BaseModel
 {
     private Date entryTime;
     private Vehicle vehicle;
+    private Gate entryGate;
+    private ParkingSlot parkingSlot;
 
     public Date getEntryTime() {
         return entryTime;
@@ -23,12 +25,12 @@ public class Ticket extends BaseModel
         this.vehicle = vehicle;
     }
 
-    public Gate getEntrygGate() {
-        return entrygGate;
+    public Gate getEntryGate() {
+        return entryGate;
     }
 
-    public void setEntrygGate(Gate entrygGate) {
-        this.entrygGate = entrygGate;
+    public void setEntryGate(Gate entryGate) {
+        this.entryGate = entryGate;
     }
 
     public ParkingSlot getParkingSlot() {
@@ -38,7 +40,4 @@ public class Ticket extends BaseModel
     public void setParkingSlot(ParkingSlot parkingSlot) {
         this.parkingSlot = parkingSlot;
     }
-
-    private Gate entrygGate;
-    private ParkingSlot parkingSlot;
 }

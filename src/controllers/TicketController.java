@@ -19,8 +19,13 @@ public class TicketController
     {
         IssueResponseDto issueResponseDto = new IssueResponseDto();
         try {
-            Ticket ticket = ticketService.issueTicket(issueRequestDto.getEntry_gate(),
-                    issueRequestDto.getEntryTime());
+            Ticket ticket = ticketService.issueTicket(
+                    issueRequestDto.getLicense_plate(),
+                    issueRequestDto.getEntry_gate_id(),
+                    issueRequestDto.getOperator_id(),
+                    issueRequestDto.getVehicle_type(),
+                    issueRequestDto.getParkinglot_id()
+            );
 
             issueResponseDto.setStatus(ResponseStatus.SUCCESS);
             issueResponseDto.setParking_slot_number(ticket.getParkingSlot().getNumber());
